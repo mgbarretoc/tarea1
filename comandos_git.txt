@@ -1,0 +1,111 @@
+****************************************************************
+****************************************************************
+********************algunos comandos git************************
+****************************************************************
+****************************************************************
+ 
+comando			comentario  
+
+1.git init		crea un repositorio en el directorio en 
+			el que estoy (vacio).
+
+2.git clone [url]		copia un proyecto desde la web al directorio 
+			actual. de esta	manera se accede al codigo
+			del proyecto. en [url] va la direccion del
+			proyecto a copiar 
+
+
+3.git status		dice si hay codigo no agregado al proyecto, 
+			tanto si esta agregado al local(con add)
+			o a la web (con commit)
+
+4.git status -s		Basicamente es lo mismo que git status pero 
+			abrevia los resultados.
+
+5.git add [nombreArchivo]	agrega el archivo al proyecto
+
+6.git commit -m 'mensaje'
+			sube al repositorio todo lo que hay en el 
+			directorio y se agrego previamente
+			al preyecto local.
+			el 'mensaje' es para poner un comentario que
+			describa los cambios.	
+
+7.git commit -a		sube todo lo sel proyecto local y ademas
+			todos los cambios en los archivos que ya 
+			existian en el anterior commit, sin la
+			necesidad de hacer add. con archivos nuevos
+			hay que ejecutar add porque sino
+			no los considera.
+
+8.git diff --cached	muestra la diferencia que hay entre lo que
+			tengo agregado al proyecto(local) y el 
+			ultimo commit
+
+9.git diff		muestra la diferencia que hay entre lo que tengo 
+			ahora y el ultimo add que hice.
+
+10.git diff HEAD		muestra la diferencia que hay entre lo que
+			tengo ahora y el ultimo commit, no importa 
+			si ejecute add o no.
+
+11.git reset HEAD -- [archivo] 
+			deshace el ultimo agregado de cambios con 
+			commit a ese archivo. Ej, si modifique 2
+			archivos y les hice commit a los 2 juntos, 
+			y luego me arrepiento de la modificacion de 
+			uno de ellos(file1) o los quiero poner en 
+			distintos commit, hago git reset HEAD --file1
+			y me queda como si hubiera hecho add(file2), 
+			commit, add(file1). 
+
+12.git rm file  	elimina el archivo del disco y del proximo commit.
+			la diferencia con reset HEAD es que este ultimo	
+			no elimina el archivo, solo deshace el ultimo cambio.
+
+13.git branch (branchname)
+			abre un nuevo brazo al proyecto.
+
+14.git branch		lista los brazos que tengo localmente y le pone *
+			al brazo en el que estoy trabajando. 
+
+15.git checkout (branchname)			
+			paso a trabajar en 'branchname', sirve para cambiarme 
+			de un brazo a otro. 
+
+16.git checkout -b newbranch
+			es como crear el brazon "newbranch" y luego hacer 
+			checkout(newbranch).
+
+17.git branch -d (branchname)
+			elimina el brazo "branchname".
+
+18.git merge (branch2)	supngamos que abri el brazo branch2 para hacer 
+			algunas cosas. si lo que hice sirve y lo quiero
+			integrar al brazo principal, me paro en este ultimo
+			(con git checkout (principal), digamos) y ejecuto
+			git merge (branch2).
+
+19.git log		tira una lista cronologica de los commits para el
+			brazo en el que estoy
+			tengo que 
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+		
+			
+
+
+
+
